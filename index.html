@@ -844,6 +844,37 @@ body:has(#play:not(.hidden)) .head-nav{display:none!important;}
 #learn .space-info.chips .chip{font-size:13px!important;padding:3px 7px;}
 @media(max-width:999px){#learn .diff-flow{grid-template-columns:1fr!important;gap:8px;padding:12px;}#learn .diff-flow>i{text-align:center;}#learn .diff-branches{display:grid;grid-template-columns:1fr 1fr;gap:6px;min-width:0;}#learn .diff-node{min-width:0;white-space:normal;overflow-wrap:anywhere;}#learn .diff-node b,#learn .diff-node span{display:block;}}
 
+
+/* ── 矮桌面 (1240×604) 返回首頁零溢出補丁 ── */
+@media (max-height: 650px) {
+  .hero {
+    padding-block: clamp(12px, 2.5vh, 22px) !important;
+    gap: 20px !important;
+  }
+  .eyebrow {
+    margin-bottom: 8px !important;
+  }
+  .hero h1 {
+    font-size: clamp(24px, 4.5vw, 32px) !important;
+    margin-bottom: 4px !important;
+  }
+  .hero .lede {
+    font-size: 15px !important;
+    margin-bottom: 12px !important;
+  }
+  .specimen {
+    max-height: clamp(130px, 26vh, 170px) !important;
+  }
+  .entry-grid, .route-grid {
+    gap: 10px !important;
+  }
+  .route-card {
+    padding: 10px 12px !important;
+  }
+  .reading-state {
+    margin-top: 8px !important;
+  }
+}
 </style>
 </head>
 <body>
